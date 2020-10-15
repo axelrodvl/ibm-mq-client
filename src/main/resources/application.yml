@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: ibm-mq-client
+  main:
+    banner-mode: off
+
+logging:
+  pattern:
+    console: "%d %-5level: %msg%n"
+  level:
+    root: ERROR
+#    co.axelrod.ibm.mq.client: ERROR
+    co.axelrod.ibm.mq.client.MQClientApplication: ERROR
+    co.axelrod.ibm.mq.client: INFO
+    org.jline: ERROR
+
+
+mq:
+  host: localhost
+  port: 1414
+  queue-manager: QM1
+  channel: DEV.APP.SVRCONN
+  user: app
+  password: passw0rd
+  ssl-cipher-suite:
